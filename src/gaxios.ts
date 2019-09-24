@@ -187,6 +187,7 @@ export class Gaxios {
       if (isStream.readable(opts.data)) {
         opts.body = opts.data;
       } else if (typeof opts.data === 'object') {
+        console.log(`DEBUG xc: `, opts.data);
         opts.body = JSON.stringify(opts.data);
         opts.headers['Content-Type'] = 'application/json';
       } else {
